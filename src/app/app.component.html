@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card >
   <form (submit)="search(searchForm)" #searchForm="ngForm">
     <mat-form-field>
       <input
@@ -16,5 +16,16 @@
       color="accent"
       type="submit">Get Weather</button>
   </form>
+</mat-card>
+<mat-card>
+  <mat-card-title>
+  Weather
+  </mat-card-title>
+    <mat-card-content *ngIf="searchResult">
+      {{searchResult}}
+      </mat-card-content>
+  <mat-card-content *ngIf="!searchResult">
+    no search yet
+  </mat-card-content>
 </mat-card>
 
